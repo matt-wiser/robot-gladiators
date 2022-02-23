@@ -5,11 +5,11 @@ var playerMoney = 10;
 var playerName = window.prompt("What is your robot's name?");
 
 // This establishes starting values for enemy name, health, and attack
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-var fight = function(){
+var fight = function(enemyName){
     // Alert players they are starting a round
     window.alert("Welcome to Robot Gladiators!");
     // Prompts player to fight or skip
@@ -58,4 +58,7 @@ var fight = function(){
         window.alert("You need to choose a valid option. Try again!");
      }
 };
-fight();
+
+for (var i = 0; i < enemyNames.length; i++){
+    fight(enemyNames[i]);
+}
